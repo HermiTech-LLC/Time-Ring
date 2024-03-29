@@ -52,7 +52,6 @@ print("Adjusted pulse durations:", adjusted_pulse_durations)
 # Generate and visualize the point cloud
 point_cloud = time_viewer.generate_points(scene.objects[0])
 time_viewer.visualize_point_cloud(point_cloud)
-```
 
 ## License
 This project is licensed under the GNU General Public License v3.0 Affero - see the [LICENSE](LICENSE) file for details.
