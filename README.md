@@ -1,7 +1,7 @@
-# Ring Laser Time Viewer
+# Ring Laser Experiment Simulator
 
 ## Overview
-The Ring Laser Time Viewer is a Python script inspired by the work of Dr. Ron Mallat. It simulates a ring laser scanning experiment with gravitational time dilation effects. The script calculates adjusted pulse durations, generates points for visualization, simulates the experiment, and visualizes the results using matplotlib.
+The Ring Laser Experiment Simulator is a Python script designed to simulate a ring laser experiment with gravitational effects such as frame dragging and time dilation. The script calculates adjusted pulse durations, generates points for visualization, conducts the experiment simulation, and visualizes the results using matplotlib.
 
 ![art](https://github.com/LoQiseaking69/TimeRing-/blob/main/IMG_8634.jpeg) 
 
@@ -16,42 +16,53 @@ The Ring Laser Time Viewer is a Python script inspired by the work of Dr. Ron Ma
 3. Run the script: `python TRL.py`
 
 ## Description
-The script comprises the following components:
+The script consists of the following components:
 
-- **RingLaserTimeViewer**: A class that simulates the ring laser experiment and visualizes the results.
-  - `__init__()`: Initializes the parameters of the experiment.
-  - `calculate_adjusted_pulse_duration()`: Calculates adjusted pulse durations considering gravitational effects.
-  - `generate_points()`: Generates points for visualization.
-  - `simulate_experiment()`: Simulates the ring laser scanning experiment.
-  - `visualize_point_cloud()`: Visualizes the generated point cloud.
+- **RingLaserExperiment**: A class representing the ring laser experiment setup and simulation.
+  - `__init__()`: Initializes experiment parameters.
+  - `calculate_frame_dragging_effect()`: Calculates frame dragging effects caused by massive objects.
+  - `calculate_time_dilation()`: Calculates time dilation effects caused by massive objects.
+  - `generate_points()`: Generates random points for visualization.
+  - `simulate_experiment()`: Simulates the ring laser experiment.
+  - `visualize_spacetime_distortion()`: Visualizes spacetime distortion induced by the experiment.
 
-- **MassObject**: A class representing massive objects in the scene.
-  - `__init__()`: Initializes the mass and position of the object.
+- **MassiveObject**: A class representing massive objects in the scene.
+  - `__init__()`: Initializes mass, position, and velocity of objects.
 
-- **Scene**: A class representing the scene containing multiple objects.
+- **Scene**: A class representing the scene with multiple massive objects.
   - `__init__()`: Initializes the scene with a list of objects.
-
-- **Main Script**: Sets up parameters for the experiment, creates objects, simulates the experiment, and visualizes the results.
 
 ## Example
 ```python
-# Set up the parameters for the ring laser time viewer
-time_viewer = RingLaserTimeViewer(
-    wavelength=1550e-9,
-    beam_power=1e-3,
-    ring_radius=1e9,
+import numpy as np
+from TRL import RingLaserExperiment, MassiveObject, Scene
+
+# Define massive objects
+black_hole1 = MassiveObject(mass=10 ** 36, position=np.array([0, 0, 0]), velocity=0)
+black_hole2 = MassiveObject(mass=5 * 10 ** 35, position=np.array([1e8, 0, 0]), velocity=1e7)
+black_hole3 = MassiveObject(mass=2 * 10 ** 35, position=np.array([-1e8, 0, 0]), velocity=-1e7)
+
+# Create scene with massive objects
+scene = Scene(objects=[black_hole1, black_hole2, black_hole3])
+
+# Initialize Ring Laser Experiment
+ring_laser_experiment = RingLaserExperiment(
+    laser_power=1e-3,
+    laser_radius=1e9,
     num_detectors=360,
+    num_points=5000,
     c=299792458,
     G=6.67430e-11
 )
 
-# Simulate the experiment and visualize the results
-adjusted_pulse_durations = time_viewer.simulate_experiment(scene)
-print("Adjusted pulse durations:", adjusted_pulse_durations)
+# Simulate experiment
+frame_dragging_effects, time_dilation_factors = ring_laser_experiment.simulate_experiment(scene)
 
-# Generate and visualize the point cloud
-point_cloud = time_viewer.generate_points(scene.objects[0])
-time_viewer.visualize_point_cloud(point_cloud)
+# Generate point cloud for visualization
+point_cloud = ring_laser_experiment.generate_points(black_hole1)
+
+# Visualize spacetime distortion
+ring_laser_experiment.visualize_spacetime_distortion(point_cloud, frame_dragging_effects, time_dilation_factors)
 ```
 
 ## License
