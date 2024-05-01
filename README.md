@@ -20,7 +20,7 @@ This enhanced version of the Ring Laser Experiment Simulator incorporates a grap
    ```
 3. Run the script:
    ```
-   python TRL_GUI.py
+   python TRL.py
    ```
 
 ## Components
