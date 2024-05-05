@@ -1,41 +1,61 @@
-
 # Ring Laser Experiment Simulator
 
 ## Overview
-This enhanced version of the Ring Laser Experiment Simulator incorporates a graphical user interface (GUI) using wxPython, providing interactive controls to adjust the parameters of the experiment. It simulates the gravitational effects on a ring laser, such as frame dragging and time dilation, and visualizes these effects in three dimensions.
-
+This advanced version of the Ring Laser Experiment Simulator features a graphical user interface (GUI) developed with wxPython, providing interactive controls for adjusting experimental parameters. It simulates gravitational effects such as frame dragging and time dilation on a ring laser setup and offers 3D visualization of these effects.
+```
 ![Art Image](https://github.com/LoQiseaking69/TimeRing-/blob/main/IMG_8634.jpeg) 
+```
 
 ## Requirements
 - Python 3.x
 - numpy
 - matplotlib
 - wxPython
+- pandas
+- scipy
+
+## Installation
+Clone or download the repository and install the required dependencies.
+```bash
+pip install numpy matplotlib wxPython pandas scipy
+```
 
 ## Usage
-1. Clone or download the repository.
-2. Install required dependencies:
-   ```
-   pip install numpy matplotlib wxPython
-   ```
-3. Run the script:
-   ```
-   python TRL.py
-   ```
+Run the script to start the simulation.
+```bash
+python TRL.py
+```
 
 ## Components
 ### RingLaserExperiment Class
-- `__init__(laser_power, laser_radius)`: Initializes experiment with specified laser power and radius.
-- `simulate_experiment()`: Calculates and returns coordinates and time dilation based on current experiment settings.
+- `__init__(laser_power, laser_radius)`: Initializes the experiment with specified laser power and radius settings.
+- `simulate_experiment()`: Simulates the experiment and calculates relevant gravitational metrics.
 
 ### MainFrame Class (GUI Component)
-- Initializes the application window and sliders for dynamic interaction.
-- `update_experiment()`: Updates the experiment parameters based on slider input and re-runs the simulation.
-- `update_plot()`: Visualizes the results in a 3D scatter plot using matplotlib.
+- Initializes the application window and interactive sliders for real-time parameter adjustments.
+- `update_experiment()`: Captures slider inputs, updates experiment parameters, and recalculates results.
+- `update_plot()`: Redraws the 3D scatter plot to visualize updated results.
+
+## Visualization and Data Output
+The results are visualized using a 3D scatter plot, and data metrics are saved in CSV files. Below are links to the output files, which include detailed data metrics:
+
+### Visualization of Ring Laser Effects
+![Ring Laser Visualization](visualization.png)
+
+### Data Metrics Output
+#### Mean Coordinates
+![Mean Coordinates](mean_metrics.csv)
+#### Standard Deviation
+![Standard Deviation](standard_deviation_metrics.csv)
+#### Skewness
+![Skewness](skewness_metrics.csv)
+#### Kurtosis
+![Kurtosis](kurtosis_metrics.csv)
+#### Correlation Coefficients
+![Correlation Coefficients](correlation_coefficients_metrics.csv)
 
 ## Example Code
 ```python
-# Main execution block to initialize the GUI
 if __name__ == "__main__":
     app = wx.App(False)
     frame = MainFrame()
