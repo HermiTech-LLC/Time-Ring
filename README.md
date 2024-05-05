@@ -53,7 +53,7 @@ The results are visualized using a 3D scatter plot, and data metrics are saved i
 #### Correlation Coefficients
 [Correlation Coefficients](https://github.com/HermiTech-LLC/Time-Ring/blob/main/correlation_coefficients_metrics.csv)
 
-## Example Code
+## Example Script Code
 ```python
 if __name__ == "__main__":
     app = wx.App(False)
