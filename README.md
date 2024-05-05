@@ -2,9 +2,9 @@
 
 ## Overview
 This advanced version of the Ring Laser Experiment Simulator features a graphical user interface (GUI) developed with wxPython, providing interactive controls for adjusting experimental parameters. It simulates gravitational effects such as frame dragging and time dilation on a ring laser setup and offers 3D visualization of these effects.
-```
+______________________________________________________________________________
 ![Art Image](https://github.com/LoQiseaking69/TimeRing-/blob/main/IMG_8634.jpeg) 
-```
+______________________________________________________________________________
 
 ## Requirements
 - Python 3.x
