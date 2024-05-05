@@ -39,12 +39,11 @@ python TRL.py
 ## Visualization and Data Output
 The results are visualized using a 3D scatter plot, and data metrics are saved in CSV files. Below are links to the output files, which include detailed data metrics:
 
-### Visualization of Ring Laser Effects
+### Notebook Visualization of Ring Laser Effects
 ![Ring Laser Visualization](visualization.png)
 
-### Data Metrics Output
-#### Mean Coordinates
-![Mean Coordinates](mean_metrics.csv)
+### Notebook Data Metrics Output
+-----------------------
 #### Standard Deviation
 ![Standard Deviation](https://github.com/HermiTech-LLC/Time-Ring/blob/main/standard_deviation_metrics.csv)
 #### Skewness
@@ -52,7 +51,7 @@ The results are visualized using a 3D scatter plot, and data metrics are saved i
 #### Kurtosis
 ![Kurtosis](https://github.com/HermiTech-LLC/Time-Ring/blob/main/kurtosis_metrics.csv)
 #### Correlation Coefficients
-![Correlation Coefficients](correlation_coefficients_metrics.csv)
+![Correlation Coefficients](https://github.com/HermiTech-LLC/Time-Ring/blob/main/correlation_coefficients_metrics.csv)
 
 ## Example Code
 ```python
