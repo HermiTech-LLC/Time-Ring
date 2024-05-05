@@ -50,7 +50,7 @@ The results are visualized using a 3D scatter plot, and data metrics are saved i
 #### Skewness
 ![Skewness](https://github.com/HermiTech-LLC/Time-Ring/blob/main/skewness_metrics.csv)
 #### Kurtosis
-![Kurtosis](kurtosis_metrics.csv)
+![Kurtosis](https://github.com/HermiTech-LLC/Time-Ring/blob/main/kurtosis_metrics.csv)
 #### Correlation Coefficients
 ![Correlation Coefficients](correlation_coefficients_metrics.csv)
 
