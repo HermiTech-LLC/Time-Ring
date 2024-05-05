@@ -45,13 +45,13 @@ The results are visualized using a 3D scatter plot, and data metrics are saved i
 ### Notebook Data Metrics Output
 -----------------------
 #### Standard Deviation
-![Standard Deviation](https://github.com/HermiTech-LLC/Time-Ring/blob/main/standard_deviation_metrics.csv)
+[Standard Deviation](https://github.com/HermiTech-LLC/Time-Ring/blob/main/standard_deviation_metrics.csv)
 #### Skewness
-![Skewness](https://github.com/HermiTech-LLC/Time-Ring/blob/main/skewness_metrics.csv)
+[Skewness](https://github.com/HermiTech-LLC/Time-Ring/blob/main/skewness_metrics.csv)
 #### Kurtosis
-![Kurtosis](https://github.com/HermiTech-LLC/Time-Ring/blob/main/kurtosis_metrics.csv)
+[Kurtosis](https://github.com/HermiTech-LLC/Time-Ring/blob/main/kurtosis_metrics.csv)
 #### Correlation Coefficients
-![Correlation Coefficients](https://github.com/HermiTech-LLC/Time-Ring/blob/main/correlation_coefficients_metrics.csv)
+[Correlation Coefficients](https://github.com/HermiTech-LLC/Time-Ring/blob/main/correlation_coefficients_metrics.csv)
 
 ## Example Code
 ```python
