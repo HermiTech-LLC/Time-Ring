@@ -46,9 +46,9 @@ The results are visualized using a 3D scatter plot, and data metrics are saved i
 #### Mean Coordinates
 ![Mean Coordinates](mean_metrics.csv)
 #### Standard Deviation
-![Standard Deviation](standard_deviation_metrics.csv)
+![Standard Deviation]([standard_deviation_metrics.csv])
 #### Skewness
-![Skewness](skewness_metrics.csv)
+![Skewness](https://github.com/HermiTech-LLC/Time-Ring/blob/main/skewness_metrics.csv)
 #### Kurtosis
 ![Kurtosis](kurtosis_metrics.csv)
 #### Correlation Coefficients
